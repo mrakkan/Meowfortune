@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+  <title>meowfortune</title>
+</head>
+<audio autoplay =""loop="" src="NO COPYRIGHT cute background music- Funny Cat by Sunha Lee.mp3"></audio>
+
+<section class="heading" >
+  <div class="image">
+    <img src="S__6971437.png" id="textcat"> 
+</div>
+</section>
+
+
+<body onclick="audio.play();">
+  <img src="S__4620296.png" id="catcrawl">
+  <img src="Untitled-1.png" id="catlean">
+  
+    
+     
+        
+      
+       <section class=" buttonfor">
+       <div class="fortune">
+        <button onclick="fortune1();fortune2();audio.play();" class=" button button1 transition ease-in-out delay-15  hover:-translate-y-1 hover:scale-110 duration-300 content-center">
+          
+          <img src="imgbin-bengal-cat-dog-tiger-paw-paws-H1wCuHZU656y501DMDhFvkSLP-removebg-preview.png" id="catpaw">
+          
+        </button>
+        
+       </div>
+       <div class="container content-center" >
+        <div class="popup" id="popup" >
+          
+          <div class="output text-center" id="message"></div>
+          <button class="close" onclick="closepopup()">LEAVE</button>
+        </div>
+       </section>
+        
+        
+        </div>
+        
+        
+    </div>
+    <div class="img-footer"><img id="catfoott"src="MeowFoot.png"></div>
+    <script>
+      
+      const gname = document.querySelector('.output');
+const btn = document.querySelector("button");
+const audio = new Audio();
+audio.src = "mixkit-sweet-kitty-meow-93 (online-audio-converter.com).mp3";
+let qoute = ['วันนี้จะมีแต่คนเข้าหาคนเข้ามาคุยด้วยนะเมี้ยว','วันนี้อาจจะไม่ค่อยดีในช่วงเริ่มวันแต่มีเรื่องดีๆรออยู่นะเมี้ยว','วันนี้จะมีเรื่องให้ต้องเครียด แต่เราจะสามารถผ่านไปได้ จากนั้นก็จะมีเรื่องดีตามมา'
+,'วันนี้ทุกอย่างรอบตัวจะเป็นใจให้กับเราแต่อย่าประมาทให้ตั้งสติดีๆ',];
+let popup = document.getElementById("popup");
+
+function fortune1(){
+  popup.classList.add("show-popup");
+  
+ }
+ function fortune2(){
+    var bruh = qoute[Math.floor(Math.random() * qoute.length)];
+    gname.innerHTML = String(bruh);
+}
+ function closepopup(){
+  popup.classList.remove("show-popup");
+  
+
+ }
+ </script>
+ <script>
+   let catcrawl = document.getElementById('catcrawl');
+   let catlean = document.getElementById('catlean');
+
+   window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+
+    catcrawl.style.top =  -700 + value * 4 + 'px';
+    catlean.style.left=   1500 - value * 3 + 'px';
+
+   })
+ </script>
+    
+
+  
+  
+
+</body>
+</html>
